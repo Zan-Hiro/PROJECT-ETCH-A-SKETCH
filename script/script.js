@@ -5,28 +5,6 @@ const initialGridWidth = 16;
 const initialGidHeight = 16;
 const makeNewGridBtn = document.querySelector('.newGrid');
 
-// function moveMousechageColor(e) {
-//   e.target.style.backgroundColor ="red";
-// }
-//   //Change Background Color MouseEvent
-//   div.addEventListener('mouseover', moveMousechageColor);
-
-//   //Clear Button
-//   clearBtn.addEventListener('click', () => {
-//     div.style.backgroundColor = '';
-//   });
-// }
-
-//     for (let i = 0; i < newGridNumber*newGridNumber; i++) {
-//         let div = document.createElement('div');
-//         div.classList.add('square');
-//         divNewContainer.appendChild(div);
-//         div.addEventListener('mouseover', moveMousechageColor);
-//         clearBtn.addEventListener('click', () => {
-//         div.style.backgroundColor = '';
-//         });
-//     }
-
 function createGrid(div,divContainer) {
   for (let i = 0; i < initialGridWidth*initialGidHeight; i++) {
     div = document.createElement('div');
@@ -61,7 +39,7 @@ function makeNewGrid() {
 }
 
 function chageBackgroundColor() {
-  let divList = document.querySelectorAll('div.square');
+  const divList = document.querySelectorAll('div.square');
   divList.forEach(item => {
     item.addEventListener('mousemove' , () =>{
       item.style.background = 'red';
@@ -70,9 +48,22 @@ function chageBackgroundColor() {
 }
 
 function clearBtn() {
-  let divList = document.querySelectorAll('div.square');
+  const divList = document.querySelectorAll('div.square');
   divList.forEach(item => {
     item.style.background = '';
+  })
+}
+
+function changeColorColorful() {
+  const divList = document.querySelectorAll('div.square');
+  divList.forEach(item => {
+    item.addEventListener('mousemove' , () =>{
+      let r = Math.floor((Math.random()*255)+1);
+      let g = Math.floor((Math.random()*255)+1);
+      let b = Math.floor((Math.random()*255)+1);
+
+      item.style.background = `rgb(${r}, ${g}, ${b})`;
+    })
   })
 }
 

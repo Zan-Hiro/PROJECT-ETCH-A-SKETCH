@@ -34,4 +34,5 @@ button {
 
 .container div{
   border: 1px solid black;
+  transition: all 0.08s;
 }
