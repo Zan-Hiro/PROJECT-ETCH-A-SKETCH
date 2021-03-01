@@ -1,0 +1,37 @@
+* , *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+button {
+  margin: 0 10px;
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(16 , 1fr);
+  grid-template-rows: repeat(16 , 1fr);
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.container div{
+  border: 1px solid black;
+}
