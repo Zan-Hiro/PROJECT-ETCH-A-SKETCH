@@ -18,7 +18,7 @@ function makeNewGrid() {
     'How many squares per side, do you want?'
     );
   
-  if(newGridNumber === null) return;
+  if(newGridNumber === null || newGridNumber !== "number") return;
   if(newGridNumber > 100) return alert(
     "Your's enter number was too big. Please enter number again(min:1 max:100)"
     );
